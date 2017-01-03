@@ -1,0 +1,140 @@
+mixin section(options)
+  +section-title(options)
+  //+section-content(options)
+
+mixin section-title(options) 
+  - title = options.title || 'Your title';
+  - classType = options.classType || 1;
+  if classType === 1
+    .section-primary
+      .main__grid
+        h1.section-title=title
+        +section-content(options)
+  if classType === 2
+    .section-info
+      .main__grid
+        h1.section-title=title
+        +section-content(options)
+  if classType === 3
+    .section-light
+      .main__grid
+        h1.section-title=title
+        +section-content(options)
+  if classType === 4
+    .section-img
+      .main__grid
+        h1.section-title=title
+        +section-content(options)
+  if classType === 5
+    .section-contact
+      .main__grid
+      h1.section-title=title
+
+mixin section-content(options)
+  - grid = options.grid || 1;
+  - columnOne = options.columnOne || 'insert your content';
+  - columnTwo = options.columnTwo || 'insert your content';
+  - columnThree = options.columnThree || 'insert your content';
+  - columnFour= options.columnFour || 'insert your content';
+  - columnTwoImg =  '../../image/' + options.columnTwoImg
+    
+  .section-content
+    if grid === 1
+      p.section-content-one=columnOne
+    if grid === 2
+      .grid
+        .grid__cell(class="1/2")
+          p= columnOne
+        .grid__cell(class="1/2")
+          img(src=columnTwoImg )
+          p.section-txt=options.columnTwo
+    if grid === 3
+      .grid
+        .grid__cell(class="1/3")=columnOne
+        .grid__cell(class="1/3")=columnTwo
+        .grid__cell(class="1/3")=columnThree
+    if grid === 4
+      .grid
+        .grid__cell(class="1/4")
+          //img( src=options.columnOneImg alt="coffee")
+          h3.section-categorie=options.columnOneTitle
+          p.section-txt=columnOne
+        .grid__cell(class="1/4")
+          h3.section-categorie=options.columnTwoTitle
+          p.section-txt=columnTwo
+        .grid__cell(class="1/4")
+          h3.section-categorie=options.columnThreeTitle
+          p.section-txt=columnThree   
+        .grid__cell(class="1/4")
+          h3.section-categorie=options.columnFourTitle
+          p.section-txt=columnFour
+
+mixin input(option)
+  - label = option.lab || 'Your text here';
+  - namee = option.name || 'input-name';
+  p.section-contact__label=label
+  input(class="input-trans" name=namee)
+
+mixin section-contact()
+  .section-contact
+    .main__grid
+      h1.section-title contact
+      .section-content
+        .grid
+          .grid__cell(class="1/2")
+            p.section-contact__label full name
+            input(class="input-trans" name="fullname" type="text")
+            p.section-contact__label email
+            input(class="input-trans" name="email" type="email")
+          .grid__cell(class="1/2")
+            p.section-content__contact Jujubes bear claw croissant wafer sweet lemon drops brownie chocolate bar. Sweet lollipop halvah tootsie roll cake fruitcake. Chocolate cake chocolate bar gingerbread lollipop tart. Jujubes bear claw donut chupa chups.
+            p Linda Newman W325 State Road 123 Mondovi, WI(Wisconsin) 98746-54321 (715) 946 - 1234
+        .grid
+          .grid__cell
+            p.section-contact__label message
+            textarea(class="input-area" name="message")
+            button(class="button-sky") message
+
+mixin portofolio(options)
+  - src = '../../image/';
+  - image11 = src +options.image11;
+  - image12 = src +options.image12;
+  - image13 = src +options.image13;
+  - image14 = src +options.image14;
+
+  - image21 = src +options.image21;
+  - image22 = src +options.image22;
+  - image23 = src +options.image23;
+  - image24 = src +options.image24;
+
+  .section-light
+    .main__grid
+      h1.section-title portofolio
+      .section-content
+        .grid
+          .grid__cell(class="1/4")
+            .section__portofolio-img
+              img(class="img-port" src=image11 alt="image 11" width="270" height="271")
+          .grid__cell(class="1/4")
+            .section__portofolio-img
+              img(class="img-port" src=image12 alt="image 12")
+          .grid__cell(class="1/4")
+            .section__portofolio-img
+              .section__portofolio-plus
+              img(class="img-port" src=image13 alt="image 13")
+          .grid__cell(class="1/4")
+            .section__portofolio-img
+              img(class="img-port" src=image14 alt="image 14")
+        .grid
+          .grid__cell(class="1/4")
+            .section__portofolio-img
+              img(class="img-port" src=image21 alt="image 21")
+          .grid__cell(class="1/4")
+            .section__portofolio-img
+              img(class="img-port" src=image22 alt="image 22")
+          .grid__cell(class="1/4")
+            .section__portofolio-img
+              img(class="img-port" src=image23 alt="image 23")
+          .grid__cell(class="1/4")
+            .section__portofolio-img
+              img(class="img-port" src=image24 alt="image 24")

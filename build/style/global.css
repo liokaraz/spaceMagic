@@ -1,0 +1,297 @@
+/*UTILITIES*/
+/*! Avalanche | MIT License | @colourgarden */
+/*------------------------------------*    SETTINGS
+\*------------------------------------*/
+/* Prefix namespace for width classes. For example; 'col-'*/
+/*------------------------------------*    LOGIC aka THE MAGIC
+\*------------------------------------*/
+/*------------------------------------*    GRID LAYOUT
+\*------------------------------------*/
+.grid {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: -20px;
+  font-size: 0rem; }
+
+.grid__cell {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  padding-left: 20px;
+  margin: 0;
+  vertical-align: top;
+  font-size: 1rem; }
+
+.grid--center {
+  text-align: center; }
+  .grid--center > .grid__cell {
+    text-align: left; }
+
+.grid__cell--center {
+  display: block;
+  margin: 0 auto; }
+
+.grid--right {
+  text-align: right; }
+  .grid--right > .grid__cell {
+    text-align: left; }
+
+.grid--middle > .grid__cell {
+  vertical-align: middle; }
+
+.grid--bottom > .grid__cell {
+  vertical-align: bottom; }
+
+.grid--flush {
+  margin-left: 0; }
+  .grid--flush > .grid__cell {
+    padding-left: 0; }
+
+/*------------------------------------*    GRID WIDTHS
+\*------------------------------------*/
+.\31\/2, .\32\/4 {
+  width: 50%; }
+
+.\31\/3 {
+  width: 33.33333%; }
+
+.\32\/3 {
+  width: 66.66667%; }
+
+.\31\/4 {
+  width: 25%; }
+
+.\33\/4 {
+  width: 75%; }
+
+@media screen and (max-width: 499px) {
+  .\31\/2--thumb, .\32\/4--thumb {
+    width: 50%; }
+  .\31\/3--thumb {
+    width: 33.33333%; }
+  .\32\/3--thumb {
+    width: 66.66667%; }
+  .\31\/4--thumb {
+    width: 25%; }
+  .\33\/4--thumb {
+    width: 75%; } }
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .\31\/2--handheld, .\32\/4--handheld {
+    width: 50%; }
+  .\31\/3--handheld {
+    width: 33.33333%; }
+  .\32\/3--handheld {
+    width: 66.66667%; }
+  .\31\/4--handheld {
+    width: 25%; }
+  .\33\/4--handheld {
+    width: 75%; } }
+
+@media screen and (min-width: 500px) {
+  .\31\/2--handheld-and-up, .\32\/4--handheld-and-up {
+    width: 50%; }
+  .\31\/3--handheld-and-up {
+    width: 33.33333%; }
+  .\32\/3--handheld-and-up {
+    width: 66.66667%; }
+  .\31\/4--handheld-and-up {
+    width: 25%; }
+  .\33\/4--handheld-and-up {
+    width: 75%; } }
+
+@media screen and (max-width: 800px) {
+  .\31\/2--pocket, .\32\/4--pocket {
+    width: 50%; }
+  .\31\/3--pocket {
+    width: 33.33333%; }
+  .\32\/3--pocket {
+    width: 66.66667%; }
+  .\31\/4--pocket {
+    width: 25%; }
+  .\33\/4--pocket {
+    width: 75%; } }
+
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .\31\/2--lap, .\32\/4--lap {
+    width: 50%; }
+  .\31\/3--lap {
+    width: 33.33333%; }
+  .\32\/3--lap {
+    width: 66.66667%; }
+  .\31\/4--lap {
+    width: 25%; }
+  .\33\/4--lap {
+    width: 75%; } }
+
+@media screen and (min-width: 801px) {
+  .\31\/2--lap-and-up, .\32\/4--lap-and-up {
+    width: 50%; }
+  .\31\/3--lap-and-up {
+    width: 33.33333%; }
+  .\32\/3--lap-and-up {
+    width: 66.66667%; }
+  .\31\/4--lap-and-up {
+    width: 25%; }
+  .\33\/4--lap-and-up {
+    width: 75%; } }
+
+@media screen and (max-width: 1024px) {
+  .\31\/2--portable, .\32\/4--portable {
+    width: 50%; }
+  .\31\/3--portable {
+    width: 33.33333%; }
+  .\32\/3--portable {
+    width: 66.66667%; }
+  .\31\/4--portable {
+    width: 25%; }
+  .\33\/4--portable {
+    width: 75%; } }
+
+@media screen and (min-width: 1025px) {
+  .\31\/2--desk, .\32\/4--desk {
+    width: 50%; }
+  .\31\/3--desk {
+    width: 33.33333%; }
+  .\32\/3--desk {
+    width: 66.66667%; }
+  .\31\/4--desk {
+    width: 25%; }
+  .\33\/4--desk {
+    width: 75%; } }
+
+@media screen and (min-width: 1160px) {
+  .\31\/2--widescreen, .\32\/4--widescreen {
+    width: 50%; }
+  .\31\/3--widescreen {
+    width: 33.33333%; }
+  .\32\/3--widescreen {
+    width: 66.66667%; }
+  .\31\/4--widescreen {
+    width: 25%; }
+  .\33\/4--widescreen {
+    width: 75%; } }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .\31\/2--retina, .\32\/4--retina {
+    width: 50%; }
+  .\31\/3--retina {
+    width: 33.33333%; }
+  .\32\/3--retina {
+    width: 66.66667%; }
+  .\31\/4--retina {
+    width: 25%; }
+  .\33\/4--retina {
+    width: 75%; } }
+
+/*BASE*/
+/*LAYOUT*/
+.header {
+  color: #fff;
+  font-family: Giddyup Std;
+  margin-top: -248px; }
+  .header-banner {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    height: 780px; }
+  @media screen and (min-width: 1025px) {
+    .header__grid {
+      margin-left: 365px;
+      margin-right: 365px; } }
+  @media screen and (min-width: 1350px) and (max-width: 1900px) {
+    .header__grid {
+      margin-left: 100px;
+      margin-right: 100px; } }
+  .header__nav-text {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold; }
+  .header__nav-textcolor {
+    color: #6fa2cc; }
+  .header__link {
+    text-decoration: none;
+    color: #fff; }
+  .header__menu {
+    margin-top: 40px; }
+  .header__menu--item {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 49px; }
+  .header__link:hover {
+    color: #6fa2cc;
+    border: solid #6fa2cc 3px; }
+  .header__title-up {
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 42px;
+    background-color: rgba(70, 81, 88, 0.8);
+    padding: 5px;
+    text-align: center; }
+  .header__title-down {
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 42px;
+    background-color: rgba(70, 81, 88, 0.8);
+    padding: 18px; }
+  .header__content {
+    padding-top: 500px; }
+
+nav {
+  background-color: rgba(70, 81, 88, 0.8);
+  position: fixed;
+  width: 100%;
+  margin-top: 240px;
+  z-index: 2; }
+
+body {
+  background: black;
+  overflow: hidden; }
+
+.footer {
+  text-transform: uppercase;
+  font-family: Giddyup Std;
+  font-size: 12px;
+  background-color: #353f47;
+  color: #465158;
+  font-weight: bold; }
+  .footer__grid {
+    margin-left: 365px;
+    margin-right: 365px;
+    padding-top: 70px;
+    padding-bottom: 70px; }
+  .footer__list-item {
+    display: inline-block; }
+  .footer__list-item:after {
+    content: ' |'; }
+
+@media screen and (min-width: 1025px) {
+  .main__grid {
+    margin-left: 365px;
+    margin-right: 365px; } }
+
+@media screen and (min-width: 1350px) and (max-width: 1900px) {
+  .main__grid {
+    margin-left: 100px;
+    margin-right: 100px; } }
+
+.wrapper {
+  height: 100%;
+  -webkit-perspective: 200px;
+  perspective: 200px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+/*COMPONENTS*/
+.circle {
+  position: absolute; }

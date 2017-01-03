@@ -1,0 +1,10 @@
+.main__grid {
+  @media screen and (min-width: 1025px) {
+    margin-left: 365px;
+    margin-right: 365px;
+  }
+  @media screen and (min-width: 1350px) and (max-width: 1900px) {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
